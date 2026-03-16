@@ -32,15 +32,16 @@ git clone <repo-url> voice-claude
 cd voice-claude
 python3 -m venv venv
 source venv/bin/activate
-pip install anthropic elevenlabs sounddevice numpy pyobjc-framework-Quartz
+pip install -r requirements.txt
 ```
 
-### 2. Set environment variables
+### 2. Configure API key
+
+Copy the example env file and add your ElevenLabs key:
 
 ```bash
-export ELEVEN_API_KEY="your-elevenlabs-api-key"
-# Optional: customize the voice
-export ELEVEN_VOICE_ID="EXAVITQu4vr4xnSDxMaL"  # Default: Sarah
+cp .env.example .env
+# Edit .env and set ELEVEN_API_KEY
 ```
 
 ### 3. Configure Wispr Flow
