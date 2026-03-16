@@ -1,0 +1,9 @@
+#!/bin/bash
+# Voice Claude launcher - run from any directory
+
+VOICE_CLAUDE_DIR="/Users/srhise/voice-claude"
+WORKING_DIR="$(pwd)"
+
+# Activate venv and run, passing current directory
+source "$VOICE_CLAUDE_DIR/venv/bin/activate"
+VOICE_CLAUDE_CWD="$WORKING_DIR" python "$VOICE_CLAUDE_DIR/main.py"
